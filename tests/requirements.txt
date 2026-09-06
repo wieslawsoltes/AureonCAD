@@ -1,0 +1,5 @@
+# Development-only dependencies, verified on GitHub Actions.
+playwright==1.62.0
+greenlet==3.5.5
+pyee==13.0.1
+typing-extensions==4.16.0
