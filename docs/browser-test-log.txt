@@ -1,0 +1,35 @@
+PASS Application initializes without uncaught exceptions
+PASS Ten-body, 28-feature reference assembly renders
+PASS Specification-tree search and selection
+PASS Assembly workbench and exploded placement
+PASS Live preview does not mutate history; cancel restores geometry
+PASS Numeric Pad definition creates a real 60×40×15 mm solid
+PASS Viewport ray picking selects actual geometry
+PASS Through-hole command subtracts the expected volume
+PASS Undo and redo reconstruct geometry
+PASS Inspector dimension edit invalidates and rebuilds downstream features
+PASS Feature suppression and restoration
+PASS Material assignment and rigid-body transform
+PASS Duplicate remaps IDs; delete is reversible
+PASS Section clipping, four render modes, and camera projection
+PASS Pointer-drawn closed sketch extrudes into a solid
+PASS Existing sketch profile remains editable
+PASS Linear pattern repeats a subtractive feature
+PASS Linked two-body Boolean subtraction with hidden tool
+PASS Keyboard command palette filters and executes commands
+PASS Project, STL, OBJ, SVG, BOM, and PNG download events
+PASS Saved editable document reopens and rebuilds identical geometry
+PASS Exported binary STL reimports as an editable mesh body
+PASS Two surface picks measure an actual 120 mm distance
+PASS No page errors, console errors, or final GL errors
+{
+  "passed": 24,
+  "failed": 0,
+  "backend": "WebGL2",
+  "nativeWebGPUTested": false,
+  "standaloneInjection": true,
+  "localStorageTested": false,
+  "pageErrors": [],
+  "consoleErrors": [],
+  "browser": "151.0.7922.34"
+}

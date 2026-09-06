@@ -1,0 +1,114 @@
+{
+  "passed": 24,
+  "failed": 0,
+  "backend": "WebGL2",
+  "nativeWebGPUTested": false,
+  "standaloneInjection": true,
+  "localStorageTested": false,
+  "checks": [
+    {
+      "name": "Application initializes without uncaught exceptions",
+      "passed": true,
+      "backend": "WebGL2"
+    },
+    {
+      "name": "Ten-body, 28-feature reference assembly renders",
+      "passed": true,
+      "triangles": 18606
+    },
+    {
+      "name": "Specification-tree search and selection",
+      "passed": true
+    },
+    {
+      "name": "Assembly workbench and exploded placement",
+      "passed": true
+    },
+    {
+      "name": "Live preview does not mutate history; cancel restores geometry",
+      "passed": true
+    },
+    {
+      "name": "Numeric Pad definition creates a real 60\u00d740\u00d715 mm solid",
+      "passed": true
+    },
+    {
+      "name": "Viewport ray picking selects actual geometry",
+      "passed": true
+    },
+    {
+      "name": "Through-hole command subtracts the expected volume",
+      "passed": true
+    },
+    {
+      "name": "Undo and redo reconstruct geometry",
+      "passed": true
+    },
+    {
+      "name": "Inspector dimension edit invalidates and rebuilds downstream features",
+      "passed": true
+    },
+    {
+      "name": "Feature suppression and restoration",
+      "passed": true
+    },
+    {
+      "name": "Material assignment and rigid-body transform",
+      "passed": true
+    },
+    {
+      "name": "Duplicate remaps IDs; delete is reversible",
+      "passed": true
+    },
+    {
+      "name": "Section clipping, four render modes, and camera projection",
+      "passed": true
+    },
+    {
+      "name": "Pointer-drawn closed sketch extrudes into a solid",
+      "passed": true
+    },
+    {
+      "name": "Existing sketch profile remains editable",
+      "passed": true
+    },
+    {
+      "name": "Linear pattern repeats a subtractive feature",
+      "passed": true
+    },
+    {
+      "name": "Linked two-body Boolean subtraction with hidden tool",
+      "passed": true
+    },
+    {
+      "name": "Keyboard command palette filters and executes commands",
+      "passed": true
+    },
+    {
+      "name": "Project, STL, OBJ, SVG, BOM, and PNG download events",
+      "passed": true
+    },
+    {
+      "name": "Saved editable document reopens and rebuilds identical geometry",
+      "passed": true
+    },
+    {
+      "name": "Exported binary STL reimports as an editable mesh body",
+      "passed": true
+    },
+    {
+      "name": "Two surface picks measure an actual 120 mm distance",
+      "passed": true
+    },
+    {
+      "name": "No page errors, console errors, or final GL errors",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Saved project could not be restored SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+  ],
+  "browser": "151.0.7922.34"
+}

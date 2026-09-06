@@ -1,0 +1,731 @@
+{
+  "format": "aureon-cad",
+  "version": 1,
+  "id": "9e9b0c36-886c-4a02-9c78-9659d1a19286",
+  "name": "Precision bearing support",
+  "units": "mm",
+  "bodies": [
+    {
+      "id": "490cdb8d-a787-4317-81a0-477ed4beda7e",
+      "name": "Mounting plate",
+      "features": [
+        {
+          "id": "64dc21f5-2f18-42f8-b93e-c88503ef37be",
+          "type": "pad",
+          "name": "Pad.1 · Base plate",
+          "params": {
+            "shape": "rectangle",
+            "width": 160,
+            "depth": 96,
+            "corner": 10,
+            "height": 12,
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "suppressed": false
+        },
+        {
+          "id": "4b595e81-3d32-4d2e-992b-67d70b898774",
+          "type": "hole",
+          "name": "Hole · Ø10 / -60, -30",
+          "params": {
+            "radius": 5,
+            "height": 14,
+            "x": -60,
+            "y": -30,
+            "z": -1,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "8493328c-d831-42f5-b78d-cb0cab43d08f",
+          "type": "hole",
+          "name": "Counterbore · Ø16",
+          "params": {
+            "radius": 8,
+            "height": 5,
+            "x": -60,
+            "y": -30,
+            "z": 8,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "cd68d466-3c6a-4b9e-bdbc-1b5ba2b0b9f4",
+          "type": "hole",
+          "name": "Hole · Ø10 / -60, 30",
+          "params": {
+            "radius": 5,
+            "height": 14,
+            "x": -60,
+            "y": 30,
+            "z": -1,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "27bd1129-d955-4ddb-a604-b68850badf42",
+          "type": "hole",
+          "name": "Counterbore · Ø16",
+          "params": {
+            "radius": 8,
+            "height": 5,
+            "x": -60,
+            "y": 30,
+            "z": 8,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "e6feb897-0ced-4260-8af8-a7781ca33462",
+          "type": "hole",
+          "name": "Hole · Ø10 / 60, -30",
+          "params": {
+            "radius": 5,
+            "height": 14,
+            "x": 60,
+            "y": -30,
+            "z": -1,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "724d3af5-bcd7-48ae-b0c7-e4e58a07c819",
+          "type": "hole",
+          "name": "Counterbore · Ø16",
+          "params": {
+            "radius": 8,
+            "height": 5,
+            "x": 60,
+            "y": -30,
+            "z": 8,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "8a056c5b-33bf-4fa6-9fb4-e2495d8c7c52",
+          "type": "hole",
+          "name": "Hole · Ø10 / 60, 30",
+          "params": {
+            "radius": 5,
+            "height": 14,
+            "x": 60,
+            "y": 30,
+            "z": -1,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        },
+        {
+          "id": "e74e95e9-a2a0-4a75-8e03-65c83d53c4ee",
+          "type": "hole",
+          "name": "Counterbore · Ø16",
+          "params": {
+            "radius": 8,
+            "height": 5,
+            "x": 60,
+            "y": 30,
+            "z": 8,
+            "axis": "Z",
+            "segments": 40
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "titanium",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "091060c7-450b-4cfb-a807-76ac91ab31d8",
+      "name": "Bearing carrier",
+      "features": [
+        {
+          "id": "2548f6b2-2ad8-4e24-8d30-218829103d00",
+          "type": "pad",
+          "name": "Pad.1 · Carrier profile",
+          "params": {
+            "shape": "polygon",
+            "points": [
+              [
+                -46,
+                0
+              ],
+              [
+                46,
+                0
+              ],
+              [
+                46,
+                42
+              ],
+              [
+                45.63727626046598,
+                47.765328743957994
+              ],
+              [
+                44.55482541191703,
+                53.43973480958332
+              ],
+              [
+                42.76971835085957,
+                58.93372942349518
+              ],
+              [
+                40.310107282017725,
+                64.16066900867891
+              ],
+              [
+                37.214781741247585,
+                69.03812160545377
+              ],
+              [
+                33.53255686138493,
+                73.48916687271968
+              ],
+              [
+                29.321503528439724,
+                77.4436091676863
+              ],
+              [
+                24.64803256903384,
+                80.83908457309269
+              ],
+              [
+                19.585847411993342,
+                83.6220444134369
+              ],
+              [
+                14.214781741247583,
+                85.74859974957707
+              ],
+              [
+                8.619540470943338,
+                87.18521353351969
+              ],
+              [
+                2.8883638983484223,
+                87.9092295077005
+              ],
+              [
+                -2.8883638983484166,
+                87.9092295077005
+              ],
+              [
+                -8.619540470943342,
+                87.18521353351969
+              ],
+              [
+                -14.214781741247577,
+                85.74859974957707
+              ],
+              [
+                -19.585847411993345,
+                83.6220444134369
+              ],
+              [
+                -24.648032569033855,
+                80.83908457309269
+              ],
+              [
+                -29.321503528439727,
+                77.4436091676863
+              ],
+              [
+                -33.53255686138492,
+                73.4891668727197
+              ],
+              [
+                -37.21478174124758,
+                69.03812160545377
+              ],
+              [
+                -40.31010728201772,
+                64.16066900867892
+              ],
+              [
+                -42.76971835085956,
+                58.933729423495194
+              ],
+              [
+                -44.55482541191703,
+                53.43973480958332
+              ],
+              [
+                -45.637276260465974,
+                47.76532874395801
+              ],
+              [
+                -46,
+                42.00000000000001
+              ]
+            ],
+            "height": 38,
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "x": 0,
+            "y": 19,
+            "z": 12
+          },
+          "suppressed": false
+        },
+        {
+          "id": "ff579937-b39b-44f0-8559-605f54bd105c",
+          "type": "hole",
+          "name": "Hole.1 · Bearing seat Ø56",
+          "params": {
+            "radius": 28,
+            "height": 42,
+            "axis": "Y",
+            "x": 0,
+            "y": -21,
+            "z": 54,
+            "segments": 64
+          },
+          "suppressed": false
+        },
+        {
+          "id": "683d5da2-2624-4799-816c-d305567030cc",
+          "type": "hole",
+          "name": "Hole · Flange fastener Ø5",
+          "params": {
+            "radius": 2.5,
+            "height": 42,
+            "axis": "Y",
+            "x": -26,
+            "y": -21,
+            "z": 28,
+            "segments": 24
+          },
+          "suppressed": false
+        },
+        {
+          "id": "e8e374c7-7dab-4bb4-bf4d-b3dfed4dada1",
+          "type": "hole",
+          "name": "Hole · Flange fastener Ø5",
+          "params": {
+            "radius": 2.5,
+            "height": 42,
+            "axis": "Y",
+            "x": -26,
+            "y": -21,
+            "z": 80,
+            "segments": 24
+          },
+          "suppressed": false
+        },
+        {
+          "id": "0a5160d0-3d61-438c-af2c-03242adcac21",
+          "type": "hole",
+          "name": "Hole · Flange fastener Ø5",
+          "params": {
+            "radius": 2.5,
+            "height": 42,
+            "axis": "Y",
+            "x": 26,
+            "y": -21,
+            "z": 28,
+            "segments": 24
+          },
+          "suppressed": false
+        },
+        {
+          "id": "bface6cc-264a-430d-abc6-ad54ca4953cc",
+          "type": "hole",
+          "name": "Hole · Flange fastener Ø5",
+          "params": {
+            "radius": 2.5,
+            "height": 42,
+            "axis": "Y",
+            "x": 26,
+            "y": -21,
+            "z": 80,
+            "segments": 24
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "aluminum",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "37633193-b22e-4010-8c4e-a8c5b79b52af",
+      "name": "Bronze sleeve bearing",
+      "features": [
+        {
+          "id": "93646540-01e6-4bc9-909e-037eda05e729",
+          "type": "shaft",
+          "name": "Shaft.1 · Sleeve",
+          "params": {
+            "radius": 28,
+            "innerRadius": 20.5,
+            "height": 40,
+            "angle": 360,
+            "segments": 64
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "brass",
+      "position": [
+        0,
+        20,
+        54
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "b6ed3f71-062b-4b26-aa04-8feab204ddf0",
+      "name": "Drive shaft",
+      "features": [
+        {
+          "id": "e515b424-0313-411b-aa8e-c31f26c32575",
+          "type": "shaft",
+          "name": "Shaft.1 · Stepped spindle",
+          "params": {
+            "profile": [
+              [
+                0,
+                0
+              ],
+              [
+                16,
+                0
+              ],
+              [
+                16,
+                14
+              ],
+              [
+                20,
+                14
+              ],
+              [
+                20,
+                88
+              ],
+              [
+                17,
+                88
+              ],
+              [
+                17,
+                115
+              ],
+              [
+                0,
+                115
+              ]
+            ],
+            "radius": 20,
+            "innerRadius": 0,
+            "height": 115,
+            "angle": 360,
+            "segments": 64
+          },
+          "suppressed": false
+        },
+        {
+          "id": "9b397e1e-0a2d-4f5a-ab30-9ae2513d3439",
+          "type": "pocket",
+          "name": "Pocket.1 · Keyway",
+          "params": {
+            "shape": "rectangle",
+            "width": 7,
+            "depth": 30,
+            "height": 8,
+            "x": 0,
+            "y": 18,
+            "z": 44
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "steel",
+      "position": [
+        0,
+        -62,
+        54
+      ],
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "2a89ca69-d77b-48a8-91cb-6aab9a17ca98",
+      "name": "Front retaining flange",
+      "features": [
+        {
+          "id": "8b6fcf4c-905b-4301-966b-bbe8eb5589a0",
+          "type": "shaft",
+          "name": "Shaft.1 · Flange",
+          "params": {
+            "radius": 35,
+            "innerRadius": 21,
+            "height": 5,
+            "angle": 360,
+            "segments": 64
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "brass",
+      "position": [
+        0,
+        -19.3,
+        54
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "c7ba7229-b2b0-4bc8-b4ea-aaced494ea12",
+      "name": "Rear retaining flange",
+      "features": [
+        {
+          "id": "f735a801-7ebf-4c5e-92de-2fc0758cc02f",
+          "type": "shaft",
+          "name": "Shaft.1 · Flange",
+          "params": {
+            "radius": 35,
+            "innerRadius": 21,
+            "height": 5,
+            "angle": 360,
+            "segments": 64
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "dark",
+      "position": [
+        0,
+        24.3,
+        54
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "fdaaa0d4-1b59-4d4f-9dff-1c7774dad45f",
+      "name": "Socket screw M5 · 1",
+      "features": [
+        {
+          "id": "f55d94a9-fb3d-40b8-8a12-8b2ef4dc99ab",
+          "type": "cylinder",
+          "name": "Pad.1 · Socket head",
+          "params": {
+            "radius": 4.5,
+            "height": 4,
+            "segments": 32
+          },
+          "suppressed": false
+        },
+        {
+          "id": "b7be2532-ff9b-4730-90e3-1c08d8a1cc66",
+          "type": "hole",
+          "name": "Pocket.1 · Hex socket",
+          "params": {
+            "radius": 2.1,
+            "height": 2.6,
+            "z": 1.6,
+            "segments": 6,
+            "axis": "Z"
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "steel",
+      "position": [
+        -26,
+        -19.05,
+        28
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "6c14c1bd-492e-4075-b0ba-213d523940c9",
+      "name": "Socket screw M5 · 2",
+      "features": [
+        {
+          "id": "12cecf78-4d8d-4e6a-b5dd-11aa42b835cd",
+          "type": "cylinder",
+          "name": "Pad.1 · Socket head",
+          "params": {
+            "radius": 4.5,
+            "height": 4,
+            "segments": 32
+          },
+          "suppressed": false
+        },
+        {
+          "id": "55ebff76-dc16-4a9a-8da0-2f9201002b97",
+          "type": "hole",
+          "name": "Pocket.1 · Hex socket",
+          "params": {
+            "radius": 2.1,
+            "height": 2.6,
+            "z": 1.6,
+            "segments": 6,
+            "axis": "Z"
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "steel",
+      "position": [
+        -26,
+        -19.05,
+        80
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "b7b7179d-577e-4a9b-9fe7-64ae5a46d0cd",
+      "name": "Socket screw M5 · 3",
+      "features": [
+        {
+          "id": "2a0ed60e-f002-45a9-920c-796d912c60ee",
+          "type": "cylinder",
+          "name": "Pad.1 · Socket head",
+          "params": {
+            "radius": 4.5,
+            "height": 4,
+            "segments": 32
+          },
+          "suppressed": false
+        },
+        {
+          "id": "47f46ff9-f0f1-4882-a084-884c22698884",
+          "type": "hole",
+          "name": "Pocket.1 · Hex socket",
+          "params": {
+            "radius": 2.1,
+            "height": 2.6,
+            "z": 1.6,
+            "segments": 6,
+            "axis": "Z"
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "steel",
+      "position": [
+        26,
+        -19.05,
+        28
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": "207aea9a-e10c-457c-97e7-bb30e910a753",
+      "name": "Socket screw M5 · 4",
+      "features": [
+        {
+          "id": "bc4e735c-f522-48af-8fda-34d5783adf2d",
+          "type": "cylinder",
+          "name": "Pad.1 · Socket head",
+          "params": {
+            "radius": 4.5,
+            "height": 4,
+            "segments": 32
+          },
+          "suppressed": false
+        },
+        {
+          "id": "b0ba5173-4000-41c9-923e-32edb204a45d",
+          "type": "hole",
+          "name": "Pocket.1 · Hex socket",
+          "params": {
+            "radius": 2.1,
+            "height": 2.6,
+            "z": 1.6,
+            "segments": 6,
+            "axis": "Z"
+          },
+          "suppressed": false
+        }
+      ],
+      "material": "steel",
+      "position": [
+        26,
+        -19.05,
+        80
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "visible": true
+    }
+  ],
+  "created": "2026-09-06T17:02:57.765Z",
+  "modified": "2026-09-06T17:02:58.147Z"
+}

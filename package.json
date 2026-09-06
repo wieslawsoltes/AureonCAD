@@ -1,0 +1,13 @@
+{
+  "name": "aureon-cad",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Framework-free parametric mesh CAD workbench with a native WebGPU renderer",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/*.test.js",
+    "build": "node scripts/build-single.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

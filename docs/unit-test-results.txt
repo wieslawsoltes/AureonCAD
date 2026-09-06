@@ -1,0 +1,200 @@
+
+> aureon-cad@1.0.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: box: analytic volume, area, centroid, and bounds
+ok 1 - box: analytic volume, area, centroid, and bounds
+  ---
+  duration_ms: 4.914384
+  type: 'test'
+  ...
+# Subtest: cylinder volume matches the exact regular-polygon cross-section
+ok 2 - cylinder volume matches the exact regular-polygon cross-section
+  ---
+  duration_ms: 3.725301
+  type: 'test'
+  ...
+# Subtest: sphere triangulation converges within 2% of analytic volume
+ok 3 - sphere triangulation converges within 2% of analytic volume
+  ---
+  duration_ms: 19.135494
+  type: 'test'
+  ...
+# Subtest: annular revolution has the expected volume
+ok 4 - annular revolution has the expected volume
+  ---
+  duration_ms: 7.699235
+  type: 'test'
+  ...
+# Subtest: 180-degree revolution includes correctly oriented end caps
+ok 5 - 180-degree revolution includes correctly oriented end caps
+  ---
+  duration_ms: 3.737123
+  type: 'test'
+  ...
+# Subtest: concave profile extrusion preserves signed area
+ok 6 - concave profile extrusion preserves signed area
+  ---
+  duration_ms: 0.69878
+  type: 'test'
+  ...
+# Subtest: clockwise input profiles are normalized
+ok 7 - clockwise input profiles are normalized
+  ---
+  duration_ms: 0.66671
+  type: 'test'
+  ...
+# Subtest: rounded rectangle area is within tessellation tolerance
+ok 8 - rounded rectangle area is within tessellation tolerance
+  ---
+  duration_ms: 0.278158
+  type: 'test'
+  ...
+# Subtest: self-intersecting and self-touching profiles are rejected
+ok 9 - self-intersecting and self-touching profiles are rejected
+  ---
+  duration_ms: 1.14507
+  type: 'test'
+  ...
+# Subtest: zero-length edges and invalid heights are rejected
+ok 10 - zero-length edges and invalid heights are rejected
+  ---
+  duration_ms: 0.708739
+  type: 'test'
+  ...
+# Subtest: through-hole subtraction removes the expected volume
+ok 11 - through-hole subtraction removes the expected volume
+  ---
+  duration_ms: 31.290299
+  type: 'test'
+  ...
+# Subtest: disjoint subtraction is an identity
+ok 12 - disjoint subtraction is an identity
+  ---
+  duration_ms: 0.552578
+  type: 'test'
+  ...
+# Subtest: overlapping box union has correct volume
+ok 13 - overlapping box union has correct volume
+  ---
+  duration_ms: 1.000331
+  type: 'test'
+  ...
+# Subtest: overlapping box intersection has correct volume
+ok 14 - overlapping box intersection has correct volume
+  ---
+  duration_ms: 0.887722
+  type: 'test'
+  ...
+# Subtest: subtracting a solid from itself yields empty geometry
+ok 15 - subtracting a solid from itself yields empty geometry
+  ---
+  duration_ms: 0.595708
+  type: 'test'
+  ...
+# Subtest: disjoint intersection is empty; disjoint union is additive
+ok 16 - disjoint intersection is empty; disjoint union is additive
+  ---
+  duration_ms: 1.318623
+  type: 'test'
+  ...
+# Subtest: rigid transforms preserve volume and transform the centroid
+ok 17 - rigid transforms preserve volume and transform the centroid
+  ---
+  duration_ms: 0.687409
+  type: 'test'
+  ...
+# Subtest: surface normals are normalized after Boolean interpolation
+ok 18 - surface normals are normalized after Boolean interpolation
+  ---
+  duration_ms: 28.134258
+  type: 'test'
+  ...
+# Subtest: feature replay, suppression, and prefix-cache invalidation
+ok 19 - feature replay, suppression, and prefix-cache invalidation
+  ---
+  duration_ms: 10.977105
+  type: 'test'
+  ...
+# Subtest: circular pattern repeats subtractive source features
+ok 20 - circular pattern repeats subtractive source features
+  ---
+  duration_ms: 154.598649
+  type: 'test'
+  ...
+# Subtest: linked body booleans respect relative transforms
+ok 21 - linked body booleans respect relative transforms
+  ---
+  duration_ms: 4.258744
+  type: 'test'
+  ...
+# Subtest: cyclic Boolean dependencies are rejected
+ok 22 - cyclic Boolean dependencies are rejected
+  ---
+  duration_ms: 0.626015
+  type: 'test'
+  ...
+# Subtest: document schema rejects duplicate ids, nonfinite numbers, and excessive segments
+ok 23 - document schema rejects duplicate ids, nonfinite numbers, and excessive segments
+  ---
+  duration_ms: 1.337549
+  type: 'test'
+  ...
+# Subtest: history commands are isolated, reversible, and invalidate redo branches
+ok 24 - history commands are isolated, reversible, and invalidate redo branches
+  ---
+  duration_ms: 1.073317
+  type: 'test'
+  ...
+# Subtest: rigid matrix inverse is numerically consistent
+ok 25 - rigid matrix inverse is numerically consistent
+  ---
+  duration_ms: 0.312001
+  type: 'test'
+  ...
+# Subtest: BVH returns nearest surface and honors section rejection
+ok 26 - BVH returns nearest surface and honors section rejection
+  ---
+  duration_ms: 1.428118
+  type: 'test'
+  ...
+# Subtest: camera projection/unprojection gives a collinear picking ray
+ok 27 - camera projection/unprojection gives a collinear picking ray
+  ---
+  duration_ms: 0.588054
+  type: 'test'
+  ...
+# Subtest: binary STL export/import round-trips triangle positions and count
+ok 28 - binary STL export/import round-trips triangle positions and count
+  ---
+  duration_ms: 1.846646
+  type: 'test'
+  ...
+# Subtest: OBJ exporter emits matching position, normal, and face indices
+ok 29 - OBJ exporter emits matching position, normal, and face indices
+  ---
+  duration_ms: 1.280733
+  type: 'test'
+  ...
+# Subtest: project JSON, CSV BOM, and SVG projections serialize safely
+ok 30 - project JSON, CSV BOM, and SVG projections serialize safely
+  ---
+  duration_ms: 2.35357
+  type: 'test'
+  ...
+# Subtest: complete example assembly builds ten nonempty editable bodies
+ok 31 - complete example assembly builds ten nonempty editable bodies
+  ---
+  duration_ms: 354.368466
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 754.542343

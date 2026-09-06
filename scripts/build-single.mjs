@@ -1,0 +1,15 @@
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const root = new URL('../', import.meta.url);
+const strip = s => s.replace(/^import[^\n]*\n/gm, '').replace(/^export /gm, '').replaceAll('import.meta.url', 'document.baseURI');
+const source = async (name) => strip(await readFile(new URL('src/' + name + '.js', root), 'utf8'));
+const worker = (await Promise.all(['math', 'kernel', 'evaluate', 'worker'].map(source))).join('\n\n');
+const script = (await Promise.all(['math', 'model', 'renderer', 'icons', 'sketch', 'io', 'app'].map(source))).join('\n\n');
+const encoded = JSON.stringify(worker).replaceAll('<', '\\u003c');
+const boot = `const workerURL = URL.createObjectURL(new Blob([${encoded}], {type:'text/javascript'}));\nglobalThis.__AUREON_WORKER_FACTORY__ = () => new Worker(workerURL);\n`;
+const css = await readFile(new URL('styles.css', root), 'utf8');
+let html = await readFile(new URL('index.html', root), 'utf8');
+html = html.replace('<link rel="stylesheet" href="styles.css">', () => `<style>${css}</style>`).replace('<script type="module" src="src/app.js"></script>', () => `<script>\n${(boot + script).replaceAll('</script', '<\\/script')}\n</script>`);
+await mkdir(new URL('dist/', root), { recursive: true });
+await writeFile(new URL('dist/AureonCAD.html', root), html);
+console.log(`Built standalone AureonCAD.html (${Buffer.byteLength(html).toLocaleString()} bytes)`);
