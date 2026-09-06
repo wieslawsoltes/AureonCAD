@@ -41,23 +41,52 @@ void main(){if(props.w<1.5&&dot(clip.xyz,world)>clip.w)discard;if(props.w>.5){ou
 const hex = s => [1, 3, 5].map(i => parseInt(s.slice(i, i + 2), 16) / 255);
 export class Renderer {
     constructor(canvas) { this.canvas = canvas; this.camera = new Camera(); this.objects = new Map(); this.doc = null; this.selected = new Set(); this.hover = null; this.mode = 'edges'; this.grid = true; this.section = { enabled: false, axis: 0, value: 0 }; this.exploded = 0; this.pending = false; this.drawCount = 0; this.lastFrameMs = 0; this.onFrame = () => { }; this.onError = () => { }; this.disposed = false; }
-    static async create(canvas, { forceGL = false, onError = () => { } } = {}) { let r = new Renderer(canvas); r.onError = onError; let failure = null; if (navigator.gpu && !forceGL) {
+    static async create(canvas, { forceGL = false, onError = () => { } } = {}) {
+        let r = new Renderer(canvas), failure = null;
+        // Device creation alone does not prove a usable rendering backend.
+        // Capture startup failures until a real frame has completed on the queue.
+        let startupError = null;
+        r.onError = message => { startupError = new Error(String(message)); };
+        if (navigator.gpu && !forceGL) {
+            try {
+                await r.initGPU();
+                await r.verifyGPU();
+                if (startupError) throw startupError;
+            } catch (error) {
+                failure = error;
+                r.dispose();
+                const replacement = canvas.cloneNode(false);
+                canvas.replaceWith(replacement);
+                r = new Renderer(replacement);
+            }
+        }
+        if (!r.device) {
+            r.initGL();
+            r.fallbackReason = forceGL ? 'WebGL2 explicitly requested'
+                : failure?.message || 'WebGPU is unavailable in this context';
+        }
+        r.onError = onError;
+        r.resizeObserver = new ResizeObserver(() => r.resize());
+        r.resizeObserver.observe(r.canvas.parentElement);
+        r.resize();
+        return r;
+    }
+    async verifyGPU(timeoutMs = 5000) {
+        let timer;
         try {
-            await r.initGPU();
+            this.resize();
+            this.render();
+            await Promise.race([
+                this.device.queue.onSubmittedWorkDone(),
+                new Promise((_, reject) => {
+                    timer = setTimeout(() => reject(new Error('WebGPU startup frame timed out')), timeoutMs);
+                })
+            ]);
+        } finally {
+            clearTimeout(timer);
         }
-        catch (e) {
-            failure = e;
-            r.dispose();
-            const c = canvas.cloneNode();
-            canvas.replaceWith(c);
-            r = new Renderer(c);
-            r.onError = onError;
-        }
-    } if (!r.device) {
-        r.initGL();
-        r.fallbackReason = forceGL ? 'WebGL2 explicitly requested' : failure?.message || 'WebGPU is unavailable in this context';
-    } r.resizeObserver = new ResizeObserver(() => r.resize()); r.resizeObserver.observe(r.canvas.parentElement); r.resize(); return r; }
-    async initGPU() { const adapter = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' }); if (!adapter)
+    }
+    async initGPU() { this.gpu = navigator.gpu; const adapter = await this.gpu.requestAdapter({ powerPreference: 'high-performance' }); this.adapter = adapter; if (!adapter)
         throw Error('No WebGPU adapter available'); this.device = await adapter.requestDevice(); const device = this.device; this.backend = 'WebGPU'; this.adapterInfo = adapter.info; device.addEventListener('uncapturederror', e => this.onError(e.error.message)); device.lost.then(info => { if (!this.disposed)
         this.onError(`GPU device lost: ${info.message}. Reload to reconnect.`); }); this.context = this.canvas.getContext('webgpu'); if (!this.context)
         throw Error('WebGPU canvas context unavailable'); this.format = navigator.gpu.getPreferredCanvasFormat(); this.context.configure({ device, format: this.format, alphaMode: 'premultiplied' }); device.pushErrorScope('validation'); const shader = device.createShaderModule({ label: 'Aureon studio GGX', code: WGSL }); const info = await shader.getCompilationInfo(); const errors = info.messages.filter(m => m.type === 'error'); if (errors.length)
